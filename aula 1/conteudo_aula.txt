@@ -1,0 +1,53 @@
+CONTEÚDO PARA ESTA AULA
+REACT COMPONENTS E ALURAFLIX
+Nessa primeira aula de React finalizaremos a home da AluraFlix! E você vai colocá-la no ar!
+
+Usaremos o Create React App para iniciar nosso projeto e styled-components para cuidar da camada de estilo da nossa aplicação, essas duas ferramentas são essenciais do mundo React. Também entenderemos como React se tornou tão popular no mercado de tecnologia.
+
+Conteúdo detalhado dessa aula
+Iniciaremos um projeto com Create React App (CRA);
+Criaremos components com React usando styled-components;
+Organizaremos as pastas do nosso projeto;
+Passaremos propriedades para components;
+Faremos deploy da sua AluraFlix na Vercel.
+Lembre de postar o resultado final da sua AluraFlix com a hashtag #ImersaoReact marcando o Mario, o Marco, a Juliana e o Paulo! Além disso, também suba o seu projeto na nossa vitrine, que você pode aprender melhor como fazer através desse vídeo da Ju Negreiros.
+
+Também entre no nosso server do Discord para compartilhar seus resultados e tirar suas dúvidas com a comunidade e professores, lembre-se que a melhor forma de aprender é ensinando, então não deixe de ajudar a comunidade respondendo as dúvidas e compartilhando seu conhecimento.
+
+Desafios dessa aula!
+Colocar a sua versão da AluraFlix, com o nome que você acha feliz;
+Mudar as cores, logo e tudo mais que te der vontade;
+Alterar os vídeos e categorias com conteúdos que você gosta;
+Compartilhar o resultado que você fez nas redes sociais e quem sabe você aparece no conteúdo extra das aulas.
+Extra: Encontrar os easter eggs da Alura no canal do DevSoutinho em cada vídeo sugerido nos links importantes das aulas e marcar o @omariosouto e @aluraonline no Twitter ou Instagram.
+Projetos da equipe:
+Projeto da Aula
+DevSoutinhoflix
+Links importantes para você acompanhar a aula
+Apostila da Imersão React - atualizada diariamente
+Download dos components da Home
+CSSs que o Mario copia magicamente durante a aula
+Pegando projeto do Figma
+Download do layout da AluraFlix
+Instale o NodeJS
+Google Fonts
+VSCode Styled Coponents - melhora sintaxe do CSS in JS
+Links citados nessa aula
+Figma - Ferramenta free para design
+Como o React Funciona? Vamos fazer juntos uma mini implementação do React!
+Dicas de VSCode - Mario Souto (DevSoutinho)
+Live Share - plugin do VSCode
+Visual Studio IntelliCode - plugin do VSCode que ajuda no autocomplete
+Como criar um projeto com React Native - Mario Souto (DevSoutinho)
+O que todo projeto deveria ter? - Mario Souto (DevSoutinho)
+Conteúdos extras
+Tire dúvidas ao vivo com Marco Bruno às 18:33 na twitch.tv/marcobrunodev, ele estará lá todos dias da #ImersãoReact fazendo a versão dele da AluraFlix, mais uma oportunidade para aprender ainda mais sobre React.
+
+Acompanhe o DevSoutinho, que todo dia trará uma dica especial todo dia para ajudar você em seus projetos no Telegram do canal https://t.me/devsoutinho.
+
+E assista aos vídeos extras que sobre estilização que a Ju Negreiros preparou.
+
+Como compartilhar sua própria AluraFlix
+Você pode, depois do deploy, simplesmente marcar a gente e também usar a hash #AluraFlix. Mas quer fazer melhor? Você pode usar esse plugin do Chrome para gravar o seu site em ação, scrollar e mostrar efeitos especiais e ainda passear pelo seu código quando ele estiver interessante.
+
+Poste no seu Instagram, Linkedin, Twitter ou Facebook e não esqueça de marcar #ImersaoReact, @aluraonline e seus professores para que a gente deixe um comentário e, quem sabe, você apareça nos extras das aulas!

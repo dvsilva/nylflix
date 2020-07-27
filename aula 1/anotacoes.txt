@@ -1,0 +1,19 @@
+logo da netflix - https://fontmeme.com/netflix-font/
+instalar reactapp - npx create-react-app nylflix
+
+plugin gravar tela
+https://chrome.google.com/webstore/detail/screencastify-screen-vide/mmeijimgabbpbgpdklnllpncmdofkcpn
+
+plugin live share - perimte compartilhar edição do código
+
+atalhos
+alt + cima/baixo - move linha no vscode
+ctrl + d - seleciona diversas referencias a mesma palavra
+
+instalar biblioteca de estilos
+yarn add styled-components
+
+npm i -> instala dependencias nodemodules
+
+ <Button as="a" className="ButtonLink" href="/"> - repassa para componente como outro tipo de tag
+

@@ -1,0 +1,17 @@
+usar biblioteca para SPA (https://reactrouter.com/web/guides/quick-start)
+yarn add react-router-dom
+
+pegar URL do navegador
+window.location.href
+
+quando não existe acaba mandando a home /
+pois é o mais genérico, com "exact" não retorna nada
+se não tiver o path é a pagina que vai carregar se nao encontrar nenhuma rota que se encaixe
+
+usar Link do reactrouterdom não recarrega a pagina
+
+biblioteca do carousel (https://gist.github.com/omariosouto/5a3cb806f5be71cfc52909bca0eaa634)
+yarn add react-slick
+
+atalhos
+ctrl + p -> abrir determinado arquivo

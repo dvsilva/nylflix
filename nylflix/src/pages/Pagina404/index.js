@@ -12,6 +12,7 @@ function Pagina404() {
         <Button as={Link} className="ButtonLink" to="/">
           Ir para home
         </Button>
+
         <Canvas />
       </Container>
     </>

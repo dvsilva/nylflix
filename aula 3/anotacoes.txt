@@ -1,0 +1,6 @@
+- state 
+
+- pegar valor do input
+onChange={function handlerQueErroPediu(infoEvento){
+  setNomeCategoria(infoEvento.target.value);
+}}

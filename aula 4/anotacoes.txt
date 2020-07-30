@@ -1,0 +1,41 @@
+- eslint
+
+npx eslint --init
+- To check syntax, find problems, and enforce code style 
+- JavaScript modules (import/export)
+- React
+- Browser
+- Use a popular style guide
+- Airbnb (https://github.com/airbnb/javascript)
+- JavaScript
+- Y
+
+plugin vscode eslint
+eslint fix all auto -> resolve problemas na mão
+
+- instalar proptypes
+npm install prop-types
+
+- as só fuciona em componente do styled component
+
+- instalar json server
+npm install json-server
+
+package.json
+"scripts": {
+    "server": "json-server --watch db.json",
+}
+
+- concurrently -> rodar dois comando em paralelo
+npm install --save-dev concurrently
+
+- heroku deploy backend
+
+- subir local -> npm run dev
+
+- API aluras
+https://suporte.alura.com.br/article/315-como-funciona-a-api-publica-da-alura
+https://suporte.alura.com.br/article/314-beta-api-do-dashboard-para-alunos
+
+- GISTS
+https://gist.github.com/omariosouto/643616a1f923b3350675b643cccb462a

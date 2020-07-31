@@ -1,39 +1,28 @@
-/* eslint-disable prefer-destructuring */
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+/* eslint-disable no-console */
+import React, { useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
+import useForm from '../../../hooks/useForm';
 import FormField from '../../../components/FormField';
-import './index.css';
-
-function getYouTubeId(youtubeURL) {
-  return youtubeURL.replace(
-    /^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/,
-    '$7'
-  );
-}
+import Button from '../../../components/Button';
+import videosRepository from '../../../repositories/videos';
+import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroVideo() {
-  const videoInicial = {
-    titulo: 'Video 01',
-    url: 'https://www.youtube.com/watch?v=5MzOCxSWrrc',
-  };
+  const history = useHistory();
+  const [categorias, setCategorias] = useState([]);
+  const categoryTitles = categorias.map(({ titulo }) => titulo);
+  const { handleChange, values } = useForm({
+    titulo: 'Video padrão',
+    url: 'https://www.youtube.com/watch?v=jOAU81jdi-c',
+    categoria: 'Front End',
+  });
 
-  const [values, setValues] = useState({ titulo: '', url: '' });
-  const [videos, setVideos] = useState([videoInicial]);
-
-  function setVideo(value) {
-    setVideos([...videos, value]);
-  }
-
-  function handleChange(event) {
-    const name = event.target.getAttribute('name') || '';
-    const value = event.target.value;
-
-    setValues({
-      ...values,
-      [name]: value,
+  useEffect(() => {
+    categoriasRepository.getAll().then(categoriasFromServer => {
+      setCategorias(categoriasFromServer);
     });
-  }
+  }, []);
 
   return (
     <PageDefault>
@@ -42,50 +31,51 @@ function CadastroVideo() {
       <form
         onSubmit={event => {
           event.preventDefault();
-          setVideo({
-            titulo: values.titulo,
-            url: values.url,
+          // alert('Video Cadastrado com sucesso!!!1!');
+
+          const categoriaEscolhida = categorias.find(categoria => {
+            return categoria.titulo === values.categoria;
           });
+
+          videosRepository
+            .create({
+              titulo: values.titulo,
+              url: values.url,
+              categoriaId: categoriaEscolhida.id,
+            })
+            .then(() => {
+              console.log('Cadastrou com sucesso!');
+              history.push('/');
+            });
         }}
       >
         <FormField
-          label="Título"
+          label="Título do Vídeo"
           name="titulo"
-          onChange={handleChange}
           value={values.titulo}
-          type="text"
+          onChange={handleChange}
         />
 
         <FormField
           label="URL"
           name="url"
-          onChange={handleChange}
           value={values.url}
-          type="text"
+          onChange={handleChange}
         />
-        <button type="submit">Cadastrar</button>
+
+        <FormField
+          label="Categoria"
+          name="categoria"
+          value={values.categoria}
+          onChange={handleChange}
+          suggestions={categoryTitles}
+        />
+
+        <Button type="submit">Cadastrar</Button>
       </form>
 
-      <section className="listaDeVideos">
-        <h2>Vídeos cadastrados</h2>
-        <ul>
-          {videos.map(video => (
-            <a
-              href={video.url}
-              key={video.titulo}
-              className="card"
-              style={{
-                color: 'red',
-                backgroundImage: `url(https://img.youtube.com/vi/${getYouTubeId(
-                  video.url
-                )}/maxresdefault.jpg)`,
-              }}
-            >
-              <span className="titulo">Título do vídeo</span>
-            </a>
-          ))}
-        </ul>
-      </section>
+      <br />
+      <br />
 
       <Link to="/cadastro/categoria">Cadastrar Categoria</Link>
     </PageDefault>

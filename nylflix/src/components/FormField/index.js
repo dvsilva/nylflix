@@ -92,7 +92,7 @@ function FormField({ label, type, name, value, onChange, suggestions }) {
         <Label.Text>{label}:</Label.Text>
         {hasSuggestions && (
           <datalist id={`suggestionFor_${fieldId}`}>
-            {suggestions.map(suggestion => (
+            {suggestions.map((suggestion) => (
               <option
                 value={suggestion}
                 key={`suggestionFor_${fieldId}_option${suggestion}`}

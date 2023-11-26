@@ -64,7 +64,7 @@ function CadastroCategoria() {
               cor: values.cor,
             })
             .then(() => {
-              console.log('Cadastrou com sucesso!');
+              // console.log('Cadastrou com sucesso!');
               navigate('/');
             });
 

@@ -7,15 +7,13 @@ import Button from '../../components/Button';
 
 function Pagina404() {
   return (
-    <>
-      <Container>
-        <Button as={Link} className="ButtonLink" to="/">
-          Ir para home
-        </Button>
+    <Container>
+      <Button as={Link} className="ButtonLink" to="/">
+        Ir para home
+      </Button>
 
-        <Canvas />
-      </Container>
-    </>
+      <Canvas />
+    </Container>
   );
 }
 

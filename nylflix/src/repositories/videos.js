@@ -9,7 +9,7 @@ function create(objetoDoVideo) {
       'Content-type': 'application/json',
     },
     body: JSON.stringify(objetoDoVideo),
-  }).then(async respostaDoServidor => {
+  }).then(async (respostaDoServidor) => {
     if (respostaDoServidor.ok) {
       const resposta = await respostaDoServidor.json();
       return resposta;

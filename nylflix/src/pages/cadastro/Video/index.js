@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 import React, { useEffect, useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import useForm from '../../../hooks/useForm';
 import FormField from '../../../components/FormField';
@@ -9,7 +9,7 @@ import videosRepository from '../../../repositories/videos';
 import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroVideo() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const [categorias, setCategorias] = useState([]);
   const categoryTitles = categorias.map(({ titulo }) => titulo);
   const { handleChange, values } = useForm({
@@ -19,7 +19,7 @@ function CadastroVideo() {
   });
 
   useEffect(() => {
-    categoriasRepository.getAll().then(categoriasFromServer => {
+    categoriasRepository.getAll().then((categoriasFromServer) => {
       setCategorias(categoriasFromServer);
     });
   }, []);
@@ -29,13 +29,13 @@ function CadastroVideo() {
       <h1>Cadastro de Video</h1>
 
       <form
-        onSubmit={event => {
+        onSubmit={(event) => {
           event.preventDefault();
           // alert('Video Cadastrado com sucesso!!!1!');
 
-          const categoriaEscolhida = categorias.find(categoria => {
-            return categoria.titulo === values.categoria;
-          });
+          const categoriaEscolhida = categorias.find(
+            (categoria) => categoria.titulo === values.categoria
+          );
 
           videosRepository
             .create({
@@ -43,10 +43,7 @@ function CadastroVideo() {
               url: values.url,
               categoriaId: categoriaEscolhida.id,
             })
-            .then(() => {
-              console.log('Cadastrou com sucesso!');
-              history.push('/');
-            });
+            .then(navigate('/'));
         }}
       >
         <FormField

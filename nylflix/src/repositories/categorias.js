@@ -9,7 +9,7 @@ function create(objetoDaCategoria) {
       'Content-type': 'application/json',
     },
     body: JSON.stringify(objetoDaCategoria),
-  }).then(async respostaDoServidor => {
+  }).then(async (respostaDoServidor) => {
     if (respostaDoServidor.ok) {
       const resposta = await respostaDoServidor.json();
       return resposta;
@@ -20,7 +20,7 @@ function create(objetoDaCategoria) {
 }
 
 function getAll() {
-  return fetch(`${URL_CATEGORIES}`).then(async respostaDoServidor => {
+  return fetch(`${URL_CATEGORIES}`).then(async (respostaDoServidor) => {
     if (respostaDoServidor.ok) {
       const resposta = await respostaDoServidor.json();
       return resposta;
@@ -32,7 +32,7 @@ function getAll() {
 
 function getAllWithVideos() {
   return fetch(`${URL_CATEGORIES}?_embed=videos`).then(
-    async respostaDoServidor => {
+    async (respostaDoServidor) => {
       if (respostaDoServidor.ok) {
         const resposta = await respostaDoServidor.json();
         return resposta;

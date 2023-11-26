@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import PageDefault from '../../../components/PageDefault';
 import FormField from '../../../components/FormField';
 import Button from '../../../components/Button';
@@ -7,7 +7,7 @@ import useForm from '../../../hooks/useForm';
 import categoriasRepository from '../../../repositories/categorias';
 
 function CadastroCategoria() {
-  const history = useHistory();
+  const navigate = useNavigate();
   const valoresIniciais = {
     titulo: '',
     descricao: '',
@@ -23,7 +23,7 @@ function CadastroCategoria() {
       ? 'http://localhost:8080/categorias'
       : 'https://devsoutinhoflix.herokuapp.com/categorias';
     // E a ju ama variáveis
-    fetch(URL_TOP).then(async respostaDoServidor => {
+    fetch(URL_TOP).then(async (respostaDoServidor) => {
       const resposta = await respostaDoServidor.json();
       setCategorias([...resposta]);
     });
@@ -65,7 +65,7 @@ function CadastroCategoria() {
             })
             .then(() => {
               console.log('Cadastrou com sucesso!');
-              history.push('/');
+              navigate('/');
             });
 
           clearForm();
@@ -105,7 +105,7 @@ function CadastroCategoria() {
       )}
 
       <ul>
-        {categorias.map(categoria => (
+        {categorias.map((categoria) => (
           <li key={`${categoria.titulo}`}>{categoria.titulo}</li>
         ))}
       </ul>

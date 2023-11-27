@@ -7,6 +7,8 @@ import Home from './pages/Home';
 import CadastroVideo from './pages/cadastro/Video';
 import CadastroCategoria from './pages/cadastro/Categoria';
 import Pagina404 from './pages/Pagina404';
+import CadastroPlayList from './pages/cadastro/Playlist';
+import Playlist from './pages/PlayList';
 
 // Desafio master blaster na descrição
 // Colocar um jogo nessa página: https://www.youtube.com/watch?v=jOAU81jdi-c :)
@@ -30,6 +32,14 @@ const App = () => {
     {
       path: '/cadastro/categoria',
       element: <CadastroCategoria />,
+    },
+    {
+      path: '/cadastro/playlist',
+      element: <CadastroPlayList />,
+    },
+    {
+      path: '/playlist/:id',
+      element: <Playlist />,
     },
     {
       element: <Pagina404 />,

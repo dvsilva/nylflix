@@ -14,9 +14,10 @@ function getYouTubeId(youtubeURL) {
   );
 }
 
-function BannerMain({ videoTitle, videoDescription, url }) {
+function BannerMain({ videoTitle, videoDescription, url, thumbnail }) {
   const youTubeID = getYouTubeId(url);
-  const bgUrl = `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
+  const bgUrl =
+    thumbnail || `https://img.youtube.com/vi/${youTubeID}/maxresdefault.jpg`;
 
   return (
     <BannerMainContainer backgroundImage={bgUrl}>
@@ -42,6 +43,11 @@ BannerMain.propTypes = {
   videoTitle: PropTypes.string.isRequired,
   videoDescription: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
+  thumbnail: PropTypes.string,
+};
+
+BannerMain.defaultProps = {
+  thumbnail: null,
 };
 
 export default BannerMain;

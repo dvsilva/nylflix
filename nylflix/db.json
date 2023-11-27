@@ -204,6 +204,55 @@
       "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
       "categoriaId": 1,
       "id": 26
+    },
+    {
+      "titulo": "Video padrão",
+      "url": "https://www.youtube.com/watch?v=1IZkBNpDSQk&list=PL3pqWI0K5Riko8KEGZ5kXEmnFvnfYy6GD&pp=gAQBiAQB",
+      "categoriaId": 6,
+      "id": 27
+    },
+    {
+      "titulo": "Video padrão 123",
+      "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
+      "categoriaId": 1,
+      "id": 28
+    },
+    {
+      "titulo": "Video padrão hahaha",
+      "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
+      "categoriaId": 1,
+      "playlistId": 1,
+      "id": 29
+    },
+    {
+      "titulo": "Video padrão",
+      "url": "https://www.youtube.com/watch?v=jOAU81jdi-c",
+      "categoriaId": 1,
+      "playlistId": 1,
+      "id": 30
+    }
+  ],
+  "playlists": [
+    {
+      "titulo": "teste",
+      "descricao": "teste",
+      "cor": "",
+      "thumbnail": "https://i.ytimg.com/vi/1IZkBNpDSQk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBva9kvG7McgCTDBNwy_I5bdc6-ww",
+      "id": 1
+    },
+    {
+      "titulo": "thumb 2",
+      "descricao": "testetetetestes",
+      "cor": "",
+      "thumbnail": "https://i.ytimg.com/vi/1IZkBNpDSQk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBva9kvG7McgCTDBNwy_I5bdc6-ww",
+      "id": 2
+    },
+    {
+      "titulo": "minha playlist",
+      "descricao": "dsasda",
+      "cor": "#912b2b",
+      "thumbnail": "https://i.ytimg.com/vi/1IZkBNpDSQk/hqdefault.jpg?sqp=-oaymwEcCPYBEIoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBva9kvG7McgCTDBNwy_I5bdc6-ww",
+      "id": 3
     }
   ]
 }
